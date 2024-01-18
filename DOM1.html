@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript addEventListener() Hands-On</title>
+</head>
+<body>
+<style>
+.container {
+      width: 80%; 
+      margin: 0 auto; 
+      background-color: #f0f0f0; 
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #3b4670;
+      border-radius:  20px;
+}      
+.rainbow{
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff7576;
+    background-color: #2B3044;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    position: relative;
+    line-height: 24px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #2B3044,
+        0px 4px 16px #2B3044;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px)
+        rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: transform 0.1s;
+}
+
+.sp {
+  background: linear-gradient(
+      90deg,
+      #866ee7,
+      #ea60da,
+      #ed8f57,
+      #fbd41d,
+      #2cca91
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color:transparent ;
+  display: block;
+}
+
+.rainbow:active {
+  transition: 0.3s;
+  transform: scale(0.93);
+}
+
+body{
+    color: rgb(247, 202, 144);
+    font-family: cursive;
+    background-color:rgb(250, 192, 117);
+}
+
+    </style>
+    <div class="container">
+    <h1>JavaScript addEventListener() Hands-On</h1> 
+
+    <!-- button 1 -->
+    <span class="sp">button 1</span>  
+    <button  id="button1" class="rainbow">Button 1</button>
+    <!-- button 2 -->
+    <span class="sp">button 2</span>
+    <button id="button2" class="rainbow">Button 2</button>
+    <!-- button 3 -->
+    <span class="sp">button 3</span>
+    <button id="button3" class="rainbow">Button 3</button>
+    
+    </div>
+    <script>
+        function handleClickButton1() {
+            alert("Button 1 was clicked!");
+        }
+        function handleClickButton2() {
+            alert("Button 2 was clicked");
+        }
+        function handleClickButton3() {
+            alert("Button 3 was clicked");
+        }
+
+       
+        document.getElementById("button1").addEventListener("click", handleClickButton1);
+        document.getElementById("button2").addEventListener("click", handleClickButton2);
+        document.getElementById("button3").addEventListener("click", handleClickButton3);
+    </script>
+
+</body>
+</html>
